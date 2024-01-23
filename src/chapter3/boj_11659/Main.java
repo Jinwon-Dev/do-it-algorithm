@@ -10,15 +10,15 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        final String[] split = reader.readLine().split(" ");
+        StringTokenizer tokenizer = new StringTokenizer(reader.readLine());
 
-        final int data = Integer.parseInt(split[0]); // 5
-        final int number = Integer.parseInt(split[1]); // 3
+        final int data = Integer.parseInt(tokenizer.nextToken()); // 5
+        final int number = Integer.parseInt(tokenizer.nextToken()); // 3
 
         final long[] arr = new long[data + 1];
 
         // 5, 4, 3, 2, 1
-        StringTokenizer tokenizer = new StringTokenizer(reader.readLine());
+        tokenizer = new StringTokenizer(reader.readLine());
 
         for (int i = 1; i <= data; i++) {
             arr[i] = arr[i - 1] + Integer.parseInt(tokenizer.nextToken());
